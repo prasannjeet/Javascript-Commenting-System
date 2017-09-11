@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>A Sample Commenting Page</title>
+        <script type="text/javascript" src="js/autoUpdate.js" ></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,800|Roboto:400,500,700" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="formArea">
+            <form name="cForm" id="form">
+                <div class="name"><span></span><input type="text" name="name" id ="name" value="Name" required onBlur="if (this.value == '')
+                        this.value = 'Name'" onFocus="if (this.value == 'Name')
+                            this.value = ''"></div>
+                                    <div class="email"><span></span><input type="text" name="email" id="email" required value="Email" onBlur="if (this.value == '')
+                        this.value = 'Email'" onFocus="if (this.value == 'Email')
+                            this.value = ''"></div>
+                                    <div class="topic"><span></span><input type="text" name="topic" id="topic" class="topic" value="Topic" onBlur="if (this.value == '')
+                        this.value = 'Topic'" onFocus="if (this.value == 'Topic')
+                            this.value = ''"></div>
+                                                        <div class="message"><span></span><textarea name="message" class="message" id="message" rows="5" placeholder="Type Your Message Here..."></textarea></div>
+
+                                                        <div class = "button"><span></span><button id="theButton" type="button" >Submit Comment!</button></div>
+
+                <script>
+                    var topics = [];
+                    var button = document.getElementById("theButton");
+                    button.onclick = function () {
+                        topics = displayDate(this.form, topics);
+                    }
+                </script>
+
+
+                <!--
+                <input id="sumitButton" class="submit" type="submit" value="Submit Form!" onclick="displayDate(this.form)"></input>
+                -->
+            </form>
+        </div>
+
+        <div id ="commentsWrapper"></div>
+        <div id ="topicFreequencyTable">
+            <div id="freequencyHeading">
+                <div id="topicName">Topic Name</div>
+                <div id="topicFreequency">Frequency</div>
+            </div>
+            <div id ="tableValues">
+                <!--
+                <div id ="chunk">
+                    <div class="title01">Topic1</div>
+                    <div class="value01">1</div>
+                </div>
+                -->
+            </div>
+        </div>
+
+
+
+    </body>
+
+
+</html>
