@@ -13,31 +13,17 @@ function displayDate(form, topics)
     if (form.name.value === 'Name' || form.email.value === 'Email' || form.topic.value === 'Topic' || form.message.value === '') {
         alert('One or more fields were left empty');
         a = false;
-
     }
-
+    
+    //Email validation function below
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     var f = 0;
-
-
     var address = form.email.value;
-
-
     if (reg.test(address) === false && a === true) {
         alert('Email not valid! Please re-enter email address');
         document.getElementById('email').value = "Email";
         a = flse;
-
     }
-    /*========================Email Validation*/
-
-    // var topics = ["Topic1","Topic2","Topic3"];
-
-    /*
-     if (topics.length === 0){
-     topics.push(form.topic.value);
-     }
-     */
 
     if (a === true) {
 
@@ -48,24 +34,12 @@ function displayDate(form, topics)
                 f = 1;
             }
         }
-
-
-
-
         if (f === 0) {
             topics.push(form.topic.value);
             topics.push(1);
 
+        //Function to get the current date in proper format
         }
-
-
-
-        /*
-         if (validate(form.email.value) === false) {
-         alert('Not a valid email');
-         return;
-         }
-         */
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth() + 1; //January is 0!
@@ -86,10 +60,7 @@ function displayDate(form, topics)
         var comment3 = form.topic.value;
         var comment4 = form.message.value;
         var comment5 = today;
-
-
         //alert (form.name.value);
-
         var singleCommentDiv = document.createElement("div");
         singleCommentDiv.className = "singleComment";
         //document.singleCommentDiv.appendChild
@@ -149,15 +120,7 @@ function displayDate(form, topics)
         document.getElementById('email').value = "Email";
         document.getElementById('topic').value = "Topic";
         document.getElementById('message').value = "";
-        //alert(topics[1]);
-        /*
-         var newParagraph = document.createElement('p');
-         var newParagraph2 = document.createElement('p');
-         newParagraph.textContent = comment;
-         newParagraph2.textContent = comment2;
-         document.getElementById("updateDiv").appendChild(newParagraph);
-         document.getElementById("updateDiv2").appendChild(newParagraph2);
-         */
+
     }
     return topics;
 }
