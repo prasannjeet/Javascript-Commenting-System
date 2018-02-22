@@ -10,20 +10,20 @@ and open the template in the editor.
         <script type="text/javascript" src="js/autoUpdate.js" ></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,800|Roboto:400,500,700" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     </head>
 
     <body>
         <div class="formArea">
             <form name="cForm" id="form">
-                <div class="name"><span></span><input type="text" name="name" id ="name" value="Name" required onBlur="if (this.value == '')
-                            this.value = 'Name'" onFocus="if (this.value == 'Name')
+                <div class="name"><span></span><input type="text" name="name" id ="name" value="Name" required onBlur="if (this.value === '')
+                            this.value = 'Name'" onFocus="if (this.value === 'Name')
                                         this.value = ''"></div>
-                <div class="email"><span></span><input type="text" name="email" id="email" required value="Email" onBlur="if (this.value == '')
-                                                this.value = 'Email'" onFocus="if (this.value == 'Email')
+                <div class="email"><span></span><input type="text" name="email" id="email" required value="Email" onBlur="if (this.value === '')
+                                                this.value = 'Email'" onFocus="if (this.value === 'Email')
                                                             this.value = ''"></div>
-                <div class="topic"><span></span><input type="text" name="topic" id="topic" class="topic" value="Topic" onBlur="if (this.value == '')
-                                                this.value = 'Topic'" onFocus="if (this.value == 'Topic')
+                <div class="topic"><span></span><input type="text" name="topic" id="topic" class="topic" value="Topic" onBlur="if (this.value === '')
+                                                this.value = 'Topic'" onFocus="if (this.value === 'Topic')
                                                             this.value = ''"></div>
                 <div class="message"><span></span><textarea name="message" class="message" id="message" rows="5" placeholder="Type Your Message Here..."></textarea></div>
 
