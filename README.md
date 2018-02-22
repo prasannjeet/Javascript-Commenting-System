@@ -1,5 +1,5 @@
-# mySayComments
-Sample commenting system with topic index.
+# JavaScript Commenting System
+Sample commenting system with topic index. I created this simple javascript project as part of an interview for a certain company.
 
 ## Question Statement:
 **The goal is to create a public page to get user's feedback. When user enter this page, he/she can see other's posts and a form to post his/her comment on a topic.**
