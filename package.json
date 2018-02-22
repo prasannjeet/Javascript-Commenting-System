@@ -1,8 +1,31 @@
 {
-    "name": "MySayComments",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "Prasannjeet",
-    "contributors": [],
-    "dependencies": {}
+  "name": "mysaycomments",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Prasannjeet",
+  "contributors": [],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.2"
+  },
+  "description": "Sample commenting system with topic index.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://prasannjeet@github.com/prasannjeet/mySayComments.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prasannjeet/mySayComments/issues"
+  },
+  "homepage": "https://github.com/prasannjeet/mySayComments#readme"
 }
